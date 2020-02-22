@@ -1,0 +1,258 @@
+@font-face {
+  font-family: myCalcFont;
+  src: url(calculator.ttf);
+}
+
+.anim {
+  background: linear-gradient(-45deg, rgb(42, 156, 185), rgb(159, 90, 223), rgb(42, 156, 185), rgb(159, 90, 223) );
+   background-size: 400% 400%; 
+  height: 900px;   width: 100%;   
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  height: 100%;
+}
+
+.container>div {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.nav-ingame {
+  font-size: 0.6em;
+  margin-top: 10px;
+  color: black;
+  text-decoration: underline;
+}
+
+.nav-ingame:hover {
+  color: aquamarine;
+}
+
+.white {
+  color: blanchedalmond;
+}
+
+.cntr {
+  text-align: center;
+}
+
+.star {
+  position: relative;
+  font-size: 0.5em;
+  letter-spacing: 0.1em;
+  float: right;
+  font-size: 20px;
+  margin-top: 17px;
+  margin-left: 30px;
+  color: gold;
+  text-decoration: underline;
+}
+
+button {
+  background: rgb(39, 43, 172);
+  background: linear-gradient(90deg, rgb(83, 50, 241) 10%, rgb(115, 21, 238) 55%);
+  color: white;
+  border: solid 1px white;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  outline: none;
+  font-size: 0.8em;
+}
+
+button:disabled {
+  background: rgb(131, 132, 145);
+  color: white;
+  border: solid 2px white;
+  /* width: 60px; */
+  height: 50px;
+  outline: none;
+  /* font-size: 0.8em; */
+}
+
+.btnControl {
+  background: rgb(39, 43, 172);
+  padding: 16 2 16 2px;
+  min-width: 75px;
+  width: auto;
+  height: 40px;
+  color: white;
+  border: #FFFFFF 2px solid;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.7em;
+}
+
+.btnControl2 {
+  /*    background:  rgba(153, 64, 162, 1);*/
+  background: #5f35a7;
+  padding: 16 2 16 2px;
+  width: auto;
+  min-width: 75px;
+  height: 40px;
+  color: white;
+  border: #FFFFFF 2px solid;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.7em;
+}
+
+.btnClass1 {
+  background: rgb(39, 43, 172);
+  background: linear-gradient(90deg, rgb(83, 50, 241) 10%, rgb(115, 21, 238) 55%);
+  color: white;
+  min-width: 50px;
+  width: auto;
+  height: 50px;
+  border: solid 1px white;
+  outline: none;
+}
+
+.btnClass2 {
+  background: purple;
+  color: white;
+  min-width: 50px;
+  width: auto;
+  height: 50px;
+  border: solid 1px white;
+  outline: none;
+}
+
+#time {
+
+  font-family: myCalcFont;
+  font-weight: normal;
+  text-align: right;
+  height: 50px;
+}
+
+.brdr {
+  border: 1px solid;
+  width: 100%;
+}
+
+/*----------------------------------------------*/
+
+.operator {
+  background-color: #303030;
+  color: white;
+  font-size: 0.65em;
+  border-radius: 4px;
+  margin: 0px;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: solid 1px white;
+}
+
+.operator2 {
+  background-color: #303030;
+  color: white;
+  font-size: 0.65em;
+  border-radius: 4px;
+  width: 120px;
+  height: 60px;
+  outline: none;
+  border: solid 1px white;
+}
+
+.calculator {
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+  text-align: center;
+}
+
+#calculator-display {
+  outline: none;
+  /* font-family: myCalcFont; */
+  height: 60px;
+  width: 240px;
+  font-size: 1.2em;
+  text-align: right;
+  padding-right: 3px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: slategrey 1px solid;
+  box-sizing: border-box;
+}
+
+.calculator-body {
+  width: 270px;
+  /* background-color: wheat; */
+  border: #f4adf7 2px solid;
+  border-radius: 4px;
+  padding: 10px;
+
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+.maintxt{
+  font-size: 0.7em;
+  text-align: justify;
+}
+/*-------------------------------------------------*/
+
+
+#finish {
+ 
+  color: white;
+  height: 80px;
+}
+
+#block{
+  font-size: 0.8em;
+  display: inline-block;
+ }
+
+
+
+#solution {
+  font-size: 1em;
+  height: 80px;
+}
+
+#message {
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.span4 img {
+  margin: 10px;
+}
+
+.span4 a{
+  font-size: 0.9em;
+}
+.span4 .img-left {
+  float: left;
+}
+.span4 .img-right {
+  float: right;
+}

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{%  block header %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'countdown/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'countdown/css/cnd_index.css' %}">
+
+<title>The Conundrum</title>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="container">
+
+        <div class="row">
+            <div class="span4">
+                <div class="content-heading"> Count Down
+                    <p class="maintxt">
+                        The Count Down game is the online version of the famous TV quiz game broadcast on Channel 4 in
+                        the UK. You can choose to play the Word Game, Numbers Game or the solve the anagram Conundrum.
+                        You are allowed 35 seconds the extra 5 seconds are needed for plying the on the screen.                
+                    </p>
+                    <!-- <a class="nav-ingame" href="{% url 'countdown:numbers' %}"> Numbers Game</a>
+                    <a class="nav-ingame" href="{% url 'countdown:daily'  %}">Daily challenge</a> -->
+                </div>
+
+                    
+
+            </div>
+
+            <div class="span4">
+                <div class="content-heading">
+                    <span style="float: left;">
+                        <a  href="{% url 'countdown:letters' %}">Word Game</a>
+                    </span>              
+                    <br>
+                    <img class="img-left" src="{%  static 'images/countdown/wrd.png' %}" />
+                    <p class="maintxt">
+                        Choose 9 letters as vowels or consonants and make the longest word you can. You can not use any
+                        letter more than once. Points are scored based on the length of the word that is found in the
+                        dictionary. <br>
+                        <span style="float: right;"><a  href="{% url 'countdown:letters' %}">Click Here to Play Words Game</a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4">
+                <div class="content-heading">
+                    <span class="spn-left" style="float: left;">
+                        <a  href="{% url 'countdown:numbers' %}">Numbers Game</a>
+                    </span> 
+                    <br>
+                </div>
+                <img class="img-right" src="{% static 'images/countdown/num.png' %}" />
+                <p class="maintxt">
+                You choose 6 Large & small numbers and the game generates a target answer. You can then use the
+                in-game calculator to try and get the answer. 10 Points are given for the correct answer and the
+                time left is added to give bonus points.
+                You are only allowed to choose a maximum of 4 large numbers from (25, 50, 75, 100).  
+                <br>
+                <span style="float: right;"><a  href="{% url 'countdown:numbers' %}">Click Here to Play Numbers Game</a></span>         
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <div class="content-heading">
+                    <span class="spn-left" style="float: left;">
+                        <a  href="{% url 'countdown:numbers' %}">The Conundrum</a>
+                    </span> 
+                    <br>
+                </div>
+                <img class="img-left" src="{% static 'images/countdown/cnd.png' %}" />
+                <p class="maintxt">
+                    The conundrum is a 9 letter anagram that has been shuffled by the game. You get 10 points for
+                    solving the conundrum and time left is added as a bonus.
+                <br>     <br>
+                <span style="float: left;"><a  href="{% url 'countdown:conundrum' %}">Click Here to Solve </a></span>         
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

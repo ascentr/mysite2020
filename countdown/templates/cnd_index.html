@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{%  block header %}
+{% load static %}
+  
+<link rel="stylesheet" href="{% static 'countdown/css/main.css' %}"> 
+<link rel="stylesheet" href="{% static 'countdown/css/cnd_index.css' %}">
+
+<title>The Conundrum</title>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center ">
+  <div class="anim">
+    <div class="container">
+
+      <div class="row" ">
+        <div class=" col col-xs-6 offset-xs-3">
+
+        <div>
+          <h3>Conundrum</h3>
+          <a class="nav-ingame" href="{% url 'countdown:letters' %}">Word Game</a>
+          <a class="nav-ingame" href="{% url 'countdown:numbers' %}"> Numbers Game</a>
+          <a class="nav-ingame" href="{% url 'countdown:daily'  %}">Daily challenge</a>
+
+          <div class="fa fa-star star" id="bscore"></div>
+        </div>
+
+        <div class="btm" id="display" style="margin-top: 50px;"></div>
+        <div>
+          <span id="time">&nbsp;</span>
+        <div>
+          <form name="myForm">
+            <input type="text" id="input_answer" name="answer">
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <input type="button" class="btnControl" onclick="this.disabled=true, generateCon(conundrum)" value="Start">
+    <input type="button" class="btnControl" value="Reset" onclick="resetLetters()">
+    <input type="button" class="btnControl" value="Play Again" onClick="document.location.reload(true)">
+  </div>
+
+  <div id="score"></div>
+  <div id="message"></div>
+  <div id="solution"> </div>
+  <div id="meaning"> </div>
+</div>
+
+
+</div> <!-- close dady div-->
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'countdown/js/cnd_index.js' %}"></script>
+{% endblock %}

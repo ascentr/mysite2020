@@ -1,0 +1,41 @@
+
+
+#display,
+#display2 {
+    min-height: 60px;
+}
+
+/* #time {
+    text-align: right;
+    color: whitesmoke;
+    font-family: myCalcFont, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
+
+#result {
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke
+}
+
+#method {
+    height: 100px;
+}
+
+
+#finished {
+    color: white;
+    font-size: 1em;
+    height: 80px;
+}
+
+#solution, message {
+    font-size: 1rem;
+    height: 80px;
+}
+
+#message {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }

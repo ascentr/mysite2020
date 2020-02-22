@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%  block header %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+<title>Portfolio</title>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="row justify-content-center  t20">
+        <h1>Portfolio</h1>
+</div>
+
+<div class="row justify-content-center">
+    <h3> <u>   Some Recent Personal Projects   </u></h3>
+</div>
+
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <div class="col-md-2" style="min-width: 230px; margin:0px 5px 5px 0px; ">
+
+            <div class="row justify-content-center">
+                <h4>Todo List</h4>
+            </div>
+            <div class="row justify-content-center">
+                <a href="{% url 'todo:index' %}">
+                    <img class="img-left" src="{%  static 'images/portfolio/port-todo.png' %}" />
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-2 " style="min-width: 230px; margin:0px 5px 5px 0px;  ">
+
+            <div class="row justify-content-center" >
+                <h4>Play Countdown</h4>
+            </div>
+            <div class="row justify-content-center ">
+                <a href="{% url 'countdown:home' %}">
+                    <img src="{%  static 'images/portfolio/port-clock.png' %}" /></a>
+            </div>
+
+        </div>
+
+        <div class="col-md-2" style="min-width: 230px; margin:0px 5px 5px 0px;">
+
+            <div class="row justify-content-center"  >
+                <h4>Poetic Legacy</h4>
+            </div>
+            <div class="row justify-content-center">
+                <a href="{% url 'countdown:letters' %}">
+                    <img class="img-left" src="{%  static 'images/portfolio/port-poetry.png' %}" />
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row justify-content-center t20">
+        <h3> <u>   School Science Dictionaries on Play  Store  </u></h3>
+</div>
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <div class="col-md-2" style="min-width: 230px; margin:0px 5px 5px 0px; ">
+
+            <div class="row justify-content-center">
+                <h4>GCSE Biology</h4>
+            </div>
+            <div class="row justify-content-center">
+                <a href="https://play.google.com/store/apps/details?id=com.biology.ascentrick" target="_blank">
+                    <img class="img-left" src="{%  static 'images/portfolio/appBio2.png' %}" />
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-2 " style="min-width: 230px; margin:0px 5px 5px 0px;  ">
+
+            <div class="row justify-content-center" >
+                <h5>GCSE Chemistery</h5>
+            </div>
+            <div class="row justify-content-center ">
+                <a href="https://play.google.com/store/apps/details?id=com.chemistry.ascentrick" target="_blank">
+                    <img src="{%  static 'images/portfolio/appChem2.png' %}" />
+                </a>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="col-md-2" style="min-width: 230px; margin:0px 5px 5px 0px;">
+            <div class="row justify-content-center"  >
+                <h4>GCSE Physics</h4>
+            </div>
+            <div class="row justify-content-center">
+                <a href="https://play.google.com/store/apps/details?id=com.physics.ascentrick" target="_blank">
+                    <img class="img-left" src="{%  static 'images/portfolio/appPhy2.png' %}" />
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>    <!-- close jumbotron-->
+
+
+
+<div class="row justify-content-center t20">
+        <h3> <u>   Previous Works  </u></h3>
+</div>
+
+<div class="jumbotron">
+    <a href="http:\\ascentrick.com/portfolio.html">Click Here</a>
+</div>
+
+
+<!-- 
+          <div class="span4">
+              <div class="content-heading">
+                  <span style="float: left;">
+                      <a  href="{% url 'countdown:letters' %}">     <h4>Todo List</h4></a>
+                  </span>              
+                  <br>
+                  <img class="img-left" src="{%  static 'images/portfolio/port-todo.png' %}" />
+                  <p class="port-maintxt">
+This Todo List in made with python django was a apersonal project to keep track of daily dev tasks.  Once registered you can personalise it and keep track of your daily chors.  Shortcut on mobil screen and keep it with you. <br>
+                      <span style="float: right;"><a  href="{% url 'countdown:letters' %}">Click Here to Play Words Game</a></span>
+                  </p>
+              </div>
+          </div> -->
+
+<br />
+<div class="row">
+    <!-- <div class="span4">
+              <div class="content-heading">
+                  <span class="spn-left" style="float: left;">
+                      <a  href="{% url 'countdown:numbers' %}">Numbers Game</a>
+                  </span> 
+                  <br>
+              </div>
+              <img class="img-right" src="{% static 'images/portfolio/new_todo.png' %}" />
+              <p class="maintxt">
+              You choose 6 Large & small numbers and the game generates a target answer. You can then use the
+              in-game calculator to try and get the answer. 10 Points are given for the correct answer and the
+              time left is added to give bonus points.
+              You are only allowed to choose a maximum of 4 large numbers from (25, 50, 75, 100).  
+              <br>
+              <span style="float: right;"><a  href="{% url 'countdown:numbers' %}">Click Here to Play Numbers Game</a></span>         
+              </p>
+          </div> -->
+</div>
+
+<div class="row">
+    <!-- <div class="span4">
+              <div class="content-heading">
+                  <span class="spn-left" style="float: left;">
+                      <a  href="{% url 'countdown:numbers' %}">The Conundrum</a>
+                  </span> 
+                  <br>
+              </div>
+              <img class="img-left" src="{% static 'images/portfolio/cnd.png' %}" />
+              <p class="maintxt">
+                  The conundrum is a 9 letter anagram that has been shuffled by the game. You get 10 points for
+                  solving the conundrum and time left is added as a bonus.
+              <br>     <br>
+              <span style="float: left;"><a  href="{% url 'countdown:conundrum' %}">Click Here to Solve </a></span>         
+              </p>
+          </div> -->
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

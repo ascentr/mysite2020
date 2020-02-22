@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="row justify-content-center t20">
+
+  <div class="col-lg-4 col-lg-offset-2">
+
+    <div class="pad-20">
+      <h2>Login</h2>
+      <form method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class='btn btn-primary' value="Login">
+      </form>
+      <p>
+        Forgotten Password ? <a href="{% url 'password_reset' %}">Reset Here.</a> <br>
+        Not Registered <a href="{% url 'accounts:signup' %}">Signup Here</a>
+      </p>
+
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}

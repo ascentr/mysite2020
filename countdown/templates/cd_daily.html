@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{%  block header %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'countdown/css/main.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'countdown/css/cnd_index.css' %}"> -->
+
+<title>The Conundrum</title>
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center ">
+    <div class="anim">
+        <div class="container">
+
+            <div class="row" ">
+        <div class=" col col-xs-6 offset-xs-3">
+                <h3>
+
+                    This Page is <u>under Construction!</u> if you are seeing this, then you are logged in and you will be
+                    notified when daily challange GOES LIVE
+
+                </h3>
+                <a href="{% url 'countdown:home' %}" class="black">Game Home</a>
+
+            </div>
+        </div>
+    </div>
+    <div id="message"></div>
+    <div id="solution"> </div>
+    <div id="meaning"> </div>
+</div>
+
+
+</div> <!-- close dady div-->
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

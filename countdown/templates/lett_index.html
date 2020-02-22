@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{%  block header %}
+{% load static %}
+  
+  
+<link rel="stylesheet" href="{% static 'countdown/css/main.css' %}"> 
+<link rel="stylesheet" href="{% static 'countdown/css/lett_index.css' %}">
+
+<title>Countdown Letters Game</title>
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="anim">
+        <div class="container">
+
+            <div class="row">
+                <div class="col col-xs-6 col offset-xs-3">
+
+                    <div>
+                        <h3>Word Game</h3>
+                        <a class="nav-ingame" href="{% url 'countdown:numbers' %}"> Numbers Game</a>
+                        <a class="nav-ingame" href="{% url 'countdown:conundrum' %}">Conundrum</a>
+                        <a class="nav-ingame" href="#">Daily challenge</a>
+
+                        <span class="fa fa-star star" id="bscore"></span>
+                    </div>
+
+                    <div class="btm" id="display"></div>
+                    <div>
+                        <div>
+                            <span id="time">&nbsp;</span>
+                        </div>
+                        <div>
+                            <form name="myForm">
+                                <input type="text" id="input_answer" name="answer">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="control" id="control">
+                <button class="btnControl" onclick="getLetter(consonant)">Consonant</button>
+                <button class="btnControl" onclick="getLetter(vowel)">Vowels</button>
+            </div>
+            <div id="saved"> </div>
+            <div id="score"></div>
+            <div id="message"> </div>
+            <div id="finish"></div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'countdown/js/lett_index.js' %}"></script>
+{% endblock %}

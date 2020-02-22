@@ -1,0 +1,67 @@
+
+{% extends "base.html"  %}
+{% block content %}
+
+		<div class="container-fluid" id="wrapper">
+
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					{% if user.is_authenticated %}
+						<h3>{{ user }}'s Task List</h3>
+
+	          <form action="{% url 'todo:add' %}" method="POST" role="form">
+	            {% csrf_token %}
+
+	                {{ form.text }}
+	                {{ form.lastdate }}
+
+									<button type="submit" class="btn btn-success t10 col-sm-offset-9" >
+										<i class="glyphicon glyphicon-plus"></i>  ADD
+									</button>
+						</form>
+
+						{% for item in todo_list %}
+							{% if user == item.owner %}
+								<ul class="list-group t20">
+									{% if item.complete %}
+										<li class="list-group-item todo-completed">{{ item.text }} {{ item.lastdate }}</li>
+									{% else %}
+										<li class="list-group-item">
+											<a href="{% url 'todo:complete' item.id %}">{{ item.text }}</a>
+											<div class="lastdate">{{ item.lastdate }} </div>
+										</li>
+									{% endif %}
+								</ul>
+							{% endif %}
+
+						{% endfor %}
+
+						<div class="col-lg-offset-1">
+							<div class="btn-group" >
+								<a href="{% url 'todo:deletecomplete' %}">
+									<button type="button" class="btn btn-warning">
+										<i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED
+									</button>
+								</a>
+								<a href="{% url 'todo:deleteall' %}">
+									<button type="button" class="btn btn-warning">
+										<i class="glyphicon glyphicon-trash"></i> DELETE ALL
+									</button>
+								</a>
+							</div>
+						</div>
+
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="row pad">
+				<div class="col-lg-12 text-center">
+					Copyright &copy; 2017 <strong>ToDo App</strong>
+				</div>
+			</div>
+		</footer>
+
+{% endblock %}
